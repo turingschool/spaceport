@@ -1,0 +1,19 @@
+{
+  "name": "spaceport",
+  "version": "1.0.0",
+  "description": "Learning about JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvmitchell/spaceport.git"
+  },
+  "author": "wvmitchell@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvmitchell/spaceport/issues"
+  },
+  "homepage": "https://github.com/wvmitchell/spaceport#readme"
+}
