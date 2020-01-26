@@ -4,6 +4,7 @@
   "description": "Learning about JavaScript",
   "main": "index.js",
   "scripts": {
+    "play": "node index.js",
     "test": "nodemon --exec 'mocha ./test'"
   },
   "repository": {
@@ -18,6 +19,8 @@
   "homepage": "https://github.com/wvmitchell/spaceport#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.0.0"
+    "faker": "^4.1.0",
+    "mocha": "^7.0.0",
+    "prompt": "^1.0.0"
   }
 }
