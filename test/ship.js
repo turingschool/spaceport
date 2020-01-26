@@ -1,7 +1,6 @@
 var assert = require('chai').assert;
 var Ship = require('../src/ship');
 var Being = require('../src/being');
-var Food = require('../src/food');
 var Part = require('../src/part');
 
 describe('Ship', function() {
@@ -78,7 +77,7 @@ describe('Ship', function() {
     assert.equal(fighter.odometer, 3340);
   })
 
-  it('has a fuel capacity of 1000 by default', function() {
+  it('has a fuel capacity of 10 by default', function() {
     var fighter = new Ship(
       { 
         name: 'Atlantis',
@@ -88,7 +87,7 @@ describe('Ship', function() {
       }
     );
 
-    assert.equal(fighter.fuelCapacity, 1000);
+    assert.equal(fighter.fuelCapacity, 10);
   })
 
   it('can be initialized with a different fuel capacity', function() {
@@ -238,7 +237,6 @@ describe('Ship', function() {
   })
 
   it('can load cargo', function() {
-    var foodCargo = new Food();
     var partCargo = new Part({name: 'Dell', type: 'computer', value: 100});
     var fighter = new Ship(
       { 
@@ -249,14 +247,12 @@ describe('Ship', function() {
       }
     );
 
-    fighter.loadCargo(foodCargo);
     fighter.loadCargo(partCargo);
 
-    assert.deepEqual(fighter.cargo, [foodCargo, partCargo]);
+    assert.deepEqual(fighter.cargo, [partCargo]);
   })
 
-  it('can only load Food and Part cargo', function() {
-    var foodCargo = new Food();
+  it('can only load Part cargo', function() {
     var partCargo = new Part({name: 'Dell', type: 'computer', value: 100});
     var fighter = new Ship(
       { 
@@ -267,12 +263,12 @@ describe('Ship', function() {
       }
     );
 
-    fighter.loadCargo(foodCargo);
     fighter.loadCargo(partCargo);
     fighter.loadCargo(1);
     fighter.loadCargo('spam');
 
-    assert.deepEqual(fighter.cargo, [foodCargo, partCargo]);
+    // HINT: look up the documentation on "instanceof"
+    assert.deepEqual(fighter.cargo, [partCargo]);
   })
 
   it('has an empty parts list by default', function() {

@@ -24,14 +24,14 @@ describe('Part', function() {
     var fighterShell = new Part({name: 'X1-shell', type: 'shell'});
     var hyperdrive = new Part({name: 'CV90-infinity', type: 'hyperdrive'})
     var computer = new Part({name: 'Alienware 550x', type: 'computer'})
-    var support = new Part({name: 'Breatheright V10.0', type: 'life support'});
-    var landing = new Part({name: 'DryWet 98', type: 'landing gear'})
+    var support = new Part({name: 'Breatheright V10.0', type: 'lifeSupport'});
+    var landing = new Part({name: 'DryWet 98', type: 'landingGear'})
 
     assert.equal(fighterShell.type, 'shell');
     assert.equal(hyperdrive.type, 'hyperdrive');
     assert.equal(computer.type, 'computer');
-    assert.equal(support.type, 'life support');
-    assert.equal(landing.type, 'landing gear');
+    assert.equal(support.type, 'lifeSupport');
+    assert.equal(landing.type, 'landingGear');
   })
 
   it('must have a valid type', function() {
