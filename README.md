@@ -40,25 +40,29 @@ problem.
     classes, using a test suite as your guide.  
   - Start with the Being class.  
     - Unskip the first test in `test/being.js`  
-    - Run `npm test`  
+    - Run `npm test test/being.js`  
     - Read the error messages CAREFULLY!  
   - Once you've fully implemented the Being class, move on to the tests for the
     Part class    
+    - Run `npm test test/part.js`  
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
 
 ### 2: Create Ship Class
   - Unskip the first test in `test/ship.js`, and get to work implementing  
+  - Run `npm test test/ship.js`  
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
 
 ### 3: Create Shop Class
   - Unskip the first test in `test/shop.js`, and get to work implementing  
+  - Run `npm test test/shop.js`  
   - Before moving on to the next iteration, take time to refactor your
     solutions. Is this the best approach to solving the problem? Is there a
     different way you could make the tests pass?  
 
 ### 4: Create Planet Class
   - Unskip the first test in `test/planet.js`, and get to work implementing  
+  - Run `npm test test/planet.js`  

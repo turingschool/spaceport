@@ -4,8 +4,7 @@
   "description": "Learning about JavaScript",
   "main": "index.js",
   "scripts": {
-    "play": "node index.js",
-    "test": "nodemon --exec 'mocha ./test'"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
