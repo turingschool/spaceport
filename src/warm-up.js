@@ -46,3 +46,30 @@
 // Express the following in code: If the variable age is greater than 100 log
 // the statement 'Oh! So old!', otherwise, log the statement 'Still a spring
 // chicken!'
+
+
+
+// Express the following in code: If the length of the variable name is longer
+// the 5 characters, log the statement 'Hi there [name]!'. Otherwise, log the
+// statement 'Well hello [name]'. In either case, the value stored in the name
+// variable should be included in the logged statement.
+
+
+
+
+//------------------------- Arrays -------------------------//
+
+// Create a new variable "numbers" and assign it to an Array of 10 different
+// numbers
+
+
+
+// Write the code to access the 5th element of the Array, using bracket
+// notation.
+
+
+// Create a new variable "planets" and assign it to an Array the 8 planets in
+// our solar system, represented by their names as Strings.
+
+
+// Write the code to access the 7th planet from the sun, using bracket notation.
