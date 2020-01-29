@@ -8,7 +8,7 @@ class Ship {
     maxCrew,
     odometer = 0,
     fuelCapacity = 10,
-    captain,
+    captain = null,
     parts = {},
   }) {
     this.name = name;
@@ -36,38 +36,35 @@ class Ship {
     if (cargoItems instanceof Part) this.cargo.push(cargoItems);
   }
 
-  updatePart(part) {
-    if (part.type === undefined) return;
-    if (this.parts[part.type]) {
-      const diff = this.parts[part.type].value - part.value;
-      this.parts[part.type] = part;
+  updatePart({ name, type, value, broken }) {
+    if (type === undefined) return;
+
+    if (this.parts[type]) {
+      const diff = this.parts[type].value - value;
+      this.parts[type] = { name, type, value, broken };
       return diff;
     }
-    this.parts[part.type] = part;
+
+    this.parts[type] = { name, type, value, broken };
   }
 
   checkReadiness() {
     const status = {};
 
-    switch (true) {
-      case !this.captain:
-        status.notes = 'Cannot fly without a captain';
-        break;
-      case !this.fuel:
-        status.notes = 'Cannot fly without fuel';
-        break;
-      case !Object.keys(this.parts).length:
-        status.notes = 'Cannot fly without all parts';
-        break;
-      default:
-        status.notes = 'Good to go!';
-        break;
+    if (!this.captain) {
+      status.notes = 'Cannot fly without a captain';
+    } else if (!this.fuel) {
+      status.notes = 'Cannot fly without fuel';
+    } else if (!Object.keys(this.parts).length) {
+      status.notes = 'Cannot fly without all parts';
+    } else {
+      status.notes = 'Good to go!';
     }
 
     status.readyToFly =
       Boolean(this.captain) &&
-      Boolean(this.fuel) &&
-      Boolean(Object.keys(this.parts).length);
+      this.fuel > 0 &&
+      Object.keys(this.parts).length > 0;
 
     return status;
   }
