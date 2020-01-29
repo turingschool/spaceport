@@ -117,20 +117,20 @@ describe('Ship', function() {
     assert.equal(fighter.fuel, 0);
   })
 
-  it.skip('has a captian', function() {
-    var captian = new Being('Will', 'human');
+  it.skip('has a captain', function() {
+    var captain = new Being('Will', 'human');
     var fighter = new Ship(
       { 
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
     );
 
-    assert.equal(fighter.captian.name, 'Will');
-    assert.instanceOf(fighter.captian, Being);
+    assert.equal(fighter.captain.name, 'Will');
+    assert.instanceOf(fighter.captain, Being);
   })
 
   it.skip('has no crew by default', function() {
@@ -383,7 +383,7 @@ describe('Ship', function() {
     assert.equal(difference, 2500);
   })
 
-  it.skip('cannot fly without a captian', function() {
+  it.skip('cannot fly without a captain', function() {
     var fighter = new Ship(
       { 
         name: 'Atlantis',
@@ -396,16 +396,16 @@ describe('Ship', function() {
     var status = fighter.checkReadiness();
 
     assert.isFalse(status.readyToFly);
-    assert.equal(status.notes, 'Cannot fly without a captian');
+    assert.equal(status.notes, 'Cannot fly without a captain');
   })
 
   it.skip('cannot fly without fuel', function() {
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var fighter = new Ship(
       { 
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
@@ -418,12 +418,12 @@ describe('Ship', function() {
   })
 
   it.skip('cannot fly without all parts', function() {
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var fighter = new Ship(
       { 
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
@@ -436,7 +436,7 @@ describe('Ship', function() {
   })
 
   it.skip('can fly', function() {
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var parts = {
       shell: new Part({name: 'S-1', type: 'shell', value: 200}),
       hyperdrive: new Part({name: 'R-100', type: 'hyperdrive', value: 20}),
@@ -448,7 +448,7 @@ describe('Ship', function() {
       { 
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
         parts: parts,
