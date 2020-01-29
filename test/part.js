@@ -26,18 +26,18 @@ describe('Part', function() {
     const computer = new Part({ name: 'Alienware 550x', type: 'computer' });
     const support = new Part({
       name: 'Breatheright V10.0',
-      type: 'lifeSupport',
+      type: 'life support',
     });
-    const landing = new Part({ name: 'DryWet 98', type: 'landingGear' });
+    const landing = new Part({ name: 'DryWet 98', type: 'landing gear' });
 
     assert.equal(fighterShell.type, 'shell');
     assert.equal(hyperdrive.type, 'hyperdrive');
     assert.equal(computer.type, 'computer');
-    assert.equal(support.type, 'lifeSupport');
-    assert.equal(landing.type, 'landingGear');
+    assert.equal(support.type, 'life support');
+    assert.equal(landing.type, 'landing gear');
   });
 
-  it.skip('must have a valid type', function() {
+  it('must have a valid type', function() {
     const validTypes = [
       'shell',
       'hyperdrive',
