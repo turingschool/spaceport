@@ -23,20 +23,26 @@ class Planet {
   }
 
   giveClearance(otherPlanet) {
-    if (!Object.keys(this.currentShip.parts).length) {
-      return 'Clearance denied: Cannot fly without all parts';
+    const hasParts = !!Object.keys(this.currentShip.parts).length;
+    const hasFuel = !!this.currentShip.fuel;
+    const hasEnoughFuel =
+      this.currentShip.fuel < this.calculateDistance(otherPlanet);
+
+    if (!hasParts) {
+      return "Clearance denied: Cannot fly without all parts";
     }
-    if (this.currentShip.fuel === 0) {
-      return 'Clearance denied: Cannot fly without fuel';
+    if (!hasFuel) {
+      return "Clearance denied: Cannot fly without fuel";
     }
-    if (this.currentShip.fuel < this.calculateDistance(otherPlanet)) {
+    if (hasEnoughFuel) {
       return `Clearance denied: Need at least ${Math.ceil(
         this.calculateDistance(otherPlanet)
       )} units of fuel to reach ${otherPlanet.name}`;
     }
+
     this.currentShip.fuel -= Math.ceil(this.calculateDistance(otherPlanet));
     otherPlanet.currentShip = this.currentShip;
-    this.currentShip = undefined;
+    this.currentShip = null;
     return `Clearance granted: Enjoy your trip to ${otherPlanet.name}`;
   }
 }
