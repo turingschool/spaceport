@@ -1,8 +1,15 @@
-var validTypes = ['shell','hyperdrive','computer','life support','landing gear', undefined]
+
 class Part {
   constructor({name, type, value}) {
+    this.validTypes = [
+      'shell',
+      'hyperdrive',
+      'computer',
+      'life support',
+      'landing gear',
+       undefined]
     this.name = name;
-    this.type = validTypes.includes(type) ? type : undefined;
+    this.type = this.validTypes.includes(type) ? type : undefined;
     this.value = value;
     this.broken = false;
   }
