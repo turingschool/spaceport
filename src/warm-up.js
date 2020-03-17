@@ -73,3 +73,15 @@
 
 
 // Write the code to access the 7th planet from the sun, using bracket notation.
+
+
+//------------------------- Objects -------------------------//
+
+// Create a new variable "planet" and assign to it an object literal with two
+// keys: name, and hasWater. The value for name should the string 'Earth', and
+// the value for hasWater should be true
+
+
+// Write the code to add the key of habitable, with the value of true. Use dot
+// notation to do this. DO NOT modify your code from above.
+
