@@ -66,7 +66,7 @@ describe('Shop', function() {
     assert.deepEqual(newShop.inventory, {})
   })
 
-  it.skip('cannot outfit a ship without a captian', function() {
+  it.skip('cannot outfit a ship without a captain', function() {
     var fighter = new Ship(
       { 
         name: 'Atlantis',
@@ -81,17 +81,17 @@ describe('Shop', function() {
     newShop.addInventory(shell)
     var result = newShop.outfitShip(fighter, 'shell')
 
-    assert.equal(result, `cannot outfit a ship without a captian`)
+    assert.equal(result, `cannot outfit a ship without a captain`)
   })
 
-  it.skip('cannot outfit a ship if the captian is broke', function() {
-    var captian = new Being('Will', 'human');
+  it.skip('cannot outfit a ship if the captain is broke', function() {
+    var captain = new Being('Will', 'human');
 
     var fighter = new Ship(
       { 
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
@@ -105,15 +105,15 @@ describe('Shop', function() {
     assert.equal(result, "you require 200 more credits to make this purchase")
   })
 
-  it.skip('cannot outfit a ship if the captian is short funds', function() {
-    var captian = new Being('Will', 'human');
-    captian.credits = 100
+  it.skip('cannot outfit a ship if the captain is short funds', function() {
+    var captain = new Being('Will', 'human');
+    captain.credits = 100
 
     var fighter = new Ship(
       { 
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
@@ -127,15 +127,15 @@ describe('Shop', function() {
     assert.equal(result, "you require 100 more credits to make this purchase")
   })
 
-  it.skip('can outfit a ship, and charge the captian', function() {
-    var captian = new Being('Will', 'human');
-    captian.credits = 1000
+  it.skip('can outfit a ship, and charge the captain', function() {
+    var captain = new Being('Will', 'human');
+    captain.credits = 1000
 
     var fighter = new Ship(
       { 
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
@@ -146,7 +146,7 @@ describe('Shop', function() {
     newShop.addInventory(shell)
     var result = newShop.outfitShip(fighter, 'shell')
 
-    assert.equal(captian.credits, 800)
+    assert.equal(captain.credits, 800)
     assert.equal(fighter.parts.shell, shell)
     assert.isUndefined(newShop.inventory.shell)
     assert.equal(result, `shell added to ship`)

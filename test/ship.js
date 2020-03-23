@@ -42,7 +42,7 @@ describe('Ship', function() {
 
   it.skip('has a max number of crew members', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -52,9 +52,21 @@ describe('Ship', function() {
     assert.equal(fighter.maxCrew, 2);
   })
 
+  it.skip('can be initialized with a different max number of crew members', function() {
+    var fighter = new Ship(
+      {
+        name: 'Atlantis',
+        type: 'military',
+        maxCrew: 12,
+      }
+    );
+
+    assert.equal(fighter.maxCrew, 12);
+  })
+
   it.skip('has an odemeter reading of zero by default', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -66,7 +78,7 @@ describe('Ship', function() {
 
   it.skip('can be initialized with a odometer reading', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -79,7 +91,7 @@ describe('Ship', function() {
 
   it.skip('has a fuel capacity of 10 by default', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -92,7 +104,7 @@ describe('Ship', function() {
 
   it.skip('can be initialized with a different fuel capacity', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -106,7 +118,7 @@ describe('Ship', function() {
 
   it.skip('has no fuel by defualt', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -120,7 +132,7 @@ describe('Ship', function() {
   it.skip('has a captain', function() {
     var captain = new Being('Will', 'human');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captain: captain,
@@ -135,7 +147,7 @@ describe('Ship', function() {
 
   it.skip('has no crew by default', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -150,7 +162,7 @@ describe('Ship', function() {
     var crewmember = new Being('Zot', 'krill');
     var droid = new Being('R2-D2', 'droid');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -170,7 +182,7 @@ describe('Ship', function() {
     var crewmember = new Being('Zot', 'krill');
     var droid = new Being('R2-D2', 'droid');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 3,
@@ -191,7 +203,7 @@ describe('Ship', function() {
     var crewmember = new Being('Zot', 'krill');
     var droid = new Being('R2-D2', 'droid');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -209,7 +221,7 @@ describe('Ship', function() {
 
   it.skip('can not add something other than a being into the crew', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -225,7 +237,7 @@ describe('Ship', function() {
 
   it.skip('has no cargo by default', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -239,7 +251,7 @@ describe('Ship', function() {
   it.skip('can load cargo', function() {
     var partCargo = new Part({name: 'Dell', type: 'computer', value: 100});
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -255,7 +267,7 @@ describe('Ship', function() {
   it.skip('can only load Part cargo', function() {
     var partCargo = new Part({name: 'Dell', type: 'computer', value: 100});
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -273,7 +285,7 @@ describe('Ship', function() {
 
   it.skip('has an empty parts list by default', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -290,7 +302,7 @@ describe('Ship', function() {
       computer: new Part({ name: 'Starmapper', type: 'computer', value: 300 }),
     };
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -308,7 +320,7 @@ describe('Ship', function() {
       computer: new Part({ name: 'Starmapper', type: 'computer', value: 300 }),
     };
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -325,7 +337,7 @@ describe('Ship', function() {
 
   it.skip('can only add valid parts', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -345,7 +357,7 @@ describe('Ship', function() {
       computer: new Part({ name: 'Starmapper', type: 'computer', value: 300 }),
     };
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -367,7 +379,7 @@ describe('Ship', function() {
       computer: new Part({ name: 'Starmapper', type: 'computer', value: 300 }),
     };
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -385,7 +397,7 @@ describe('Ship', function() {
 
   it.skip('cannot fly without a captain', function() {
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         maxCrew: 2,
@@ -402,7 +414,7 @@ describe('Ship', function() {
   it.skip('cannot fly without fuel', function() {
     var captain = new Being('Will', 'human');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captain: captain,
@@ -420,7 +432,7 @@ describe('Ship', function() {
   it.skip('cannot fly without all parts', function() {
     var captain = new Being('Will', 'human');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captain: captain,
@@ -445,7 +457,7 @@ describe('Ship', function() {
       landingGear: new Part({name: 'Legs-2', type: 'landingGear', value: 100}),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
         captain: captain,
