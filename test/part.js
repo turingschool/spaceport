@@ -36,11 +36,11 @@ describe('Part', function() {
 
   it.skip('must have a valid type', function() {
     var validTypes = [
-      'shell', 
-      'hyperdrive', 
-      'computer', 
-      'life support', 
-      'landing gear', 
+      'shell',
+      'hyperdrive',
+      'computer',
+      'life support',
+      'landing gear',
       undefined
     ]
     var computer = new Part({name: 'Alienware 550x', type: 'computer'})
@@ -59,8 +59,8 @@ describe('Part', function() {
   it.skip('can have a value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 200
       }
     )
@@ -71,8 +71,8 @@ describe('Part', function() {
   it.skip('can have a different value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 300,
       }
     )
@@ -83,8 +83,8 @@ describe('Part', function() {
   it.skip('is not broken by default', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
-        type: 'computer', 
+        name: 'Alienware 550x',
+        type: 'computer',
         value: 300,
       }
     )
@@ -95,7 +95,7 @@ describe('Part', function() {
   it.skip('is invalid without a name', function() {
     var computer = new Part(
       {
-        type: 'computer', 
+        type: 'computer',
         value: 300,
       }
     )
@@ -106,7 +106,7 @@ describe('Part', function() {
   it.skip('is invalid without a type', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         value: 300,
       }
     )
@@ -117,7 +117,7 @@ describe('Part', function() {
   it.skip('is invalid without a value', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         type: 'computer',
       }
     )
@@ -128,7 +128,7 @@ describe('Part', function() {
   it.skip('is valid', function() {
     var computer = new Part(
       {
-        name: 'Alienware 550x', 
+        name: 'Alienware 550x',
         type: 'computer',
         value: 300,
       }

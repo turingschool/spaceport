@@ -34,7 +34,7 @@ describe('Planet', function() {
 
   it.skip('can allow a ship to land', function() {
     var planet = new Planet({name: 'F2'})
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var parts = {
       shell: new Part({name: 'S-1', type: 'shell', value: 200}),
       hyperdrive: new Part({name: 'R-100', type: 'hyperdrive', value: 20}),
@@ -43,10 +43,10 @@ describe('Planet', function() {
       landingGear: new Part({name: 'Legs-2', type: 'landingGear', value: 100}),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
         parts: parts,
@@ -93,12 +93,12 @@ describe('Planet', function() {
 
   it.skip('can refuel a ship', function() {
     var planet = new Planet({name: 'F2'})
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
@@ -113,12 +113,12 @@ describe('Planet', function() {
   it.skip('cannot send a ship to another planet if the ship is missing parts', function() {
     var planet = new Planet({name: 'F2', coordinates: {x:0, y:0, z:0}})
     var otherPlanet = new Planet({name: 'M2', coordinates: {x:1, y:1, z:1}})
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
       }
@@ -134,7 +134,7 @@ describe('Planet', function() {
   it.skip('cannot send a ship if it is has no fuel', function() {
     var planet = new Planet({name: 'F2', coordinates: {x:0, y:0, z:0}})
     var otherPlanet = new Planet({name: 'M2', coordinates: {x:1, y:1, z:1}})
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var parts = {
       shell: new Part({name: 'S-1', type: 'shell', value: 200}),
       hyperdrive: new Part({name: 'R-100', type: 'hyperdrive', value: 20}),
@@ -143,10 +143,10 @@ describe('Planet', function() {
       landingGear: new Part({name: 'Legs-2', type: 'landingGear', value: 100}),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
         parts: parts,
@@ -162,7 +162,7 @@ describe('Planet', function() {
   it.skip('cannot send a ship if it is has insufficient fuel', function() {
     var planet = new Planet({name: 'F2', coordinates: {x:0, y:0, z:0}})
     var otherPlanet = new Planet({name: 'M2', coordinates: {x:1, y:1, z:1}})
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var parts = {
       shell: new Part({name: 'S-1', type: 'shell', value: 200}),
       hyperdrive: new Part({name: 'R-100', type: 'hyperdrive', value: 20}),
@@ -171,10 +171,10 @@ describe('Planet', function() {
       landingGear: new Part({name: 'Legs-2', type: 'landingGear', value: 100}),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
         parts: parts,
@@ -192,7 +192,7 @@ describe('Planet', function() {
   it.skip('can send a ship and update the ship & planets', function() {
     var planet = new Planet({name: 'F2', coordinates: {x:0, y:0, z:0}})
     var otherPlanet = new Planet({name: 'M2', coordinates: {x:1, y:1, z:1}})
-    var captian = new Being('Will', 'human');
+    var captain = new Being('Will', 'human');
     var parts = {
       shell: new Part({name: 'S-1', type: 'shell', value: 200}),
       hyperdrive: new Part({name: 'R-100', type: 'hyperdrive', value: 20}),
@@ -201,10 +201,10 @@ describe('Planet', function() {
       landingGear: new Part({name: 'Legs-2', type: 'landingGear', value: 100}),
     }
     var fighter = new Ship(
-      { 
+      {
         name: 'Atlantis',
         type: 'military',
-        captian: captian,
+        captain: captain,
         maxCrew: 2,
         odometer: 3340,
         parts: parts,

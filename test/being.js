@@ -2,17 +2,18 @@ var assert = require('chai').assert;
 var Being = require('../src/being');
 
 describe('Being', function() {
+  it.skip('should have a name', function() {
+    var alien = new Being('Walter')
+
+    assert.equal(alien.name, 'Walter')
+  })
+
   it.skip('is alive by default', function() {
     var alien = new Being('Walter')
 
     assert.isTrue(alien.isAlive)
   })
 
-  it.skip('should have a name', function() {
-    var alien = new Being('Walter')
-
-    assert.equal(alien.name, 'Walter')
-  })
 
   it.skip('can have a different name', function() {
     var alien = new Being('Ed')
